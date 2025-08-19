@@ -139,6 +139,44 @@ export function Professionals() {
             </CardContent>
           </Card>
 
+          <Card className="overflow-hidden p-0">
+            <CardContent className="p-0">
+              <div>
+                <div className="relative h-48">
+                  <Image
+                    src={fotoImg}
+                    alt="Foto da clinica"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="p-4 space-y-4">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="font-semibold">
+                      Clinica centro
+                    </h3>
+                    <p className="text-sm text-gray-500">
+                      Rua x, centro, Campo Grande - MS
+                    </p>
+                  </div>
+
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500"></div>
+                </div>
+
+                <Link
+                  href="/clinica/123"
+                  className="w-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center py-2 rounded-md text-sm md:text-base font-medium"
+                >
+                  Agendar horário
+                  <ArrowRight className="ml-2" />
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
         </section>
 
       </div>
