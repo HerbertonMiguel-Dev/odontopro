@@ -71,7 +71,7 @@ export function Header() {
           href="/"
           className="text-3xl font-bold text-zinc-900"
         >
-          Odonto<span className="text-emerald-500">PRO</span>
+          Smart<span className="text-emerald-500">Odonto</span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-4">
