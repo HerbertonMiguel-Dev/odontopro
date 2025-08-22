@@ -12,10 +12,10 @@ import {
 	SheetTrigger,
 } from "@/components/ui/sheet"
 import { Button } from '@/components/ui/button';
-import { Banknote, CalendarCheck2, ChevronLeft, ChevronRight, Folder, List, Settings } from 'lucide-react';
+import { Banknote, CalendarCheck2, ChevronLeft, ChevronRight, Folder, List, Settings, User, Stethoscope, Syringe } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import logoImg from '../../../../../public/logo-odonto.png'
+import logoImg from '../../../../../public/SmartOdonto.png'
 
 import {
 	Collapsible,
@@ -113,7 +113,7 @@ export function SidebarDashboard({ children }: { children: React.ReactNode }) {
 								label="Serviços"
 								pathname={pathname}
 								isCollapsed={isCollapsed}
-								icon={<Folder className='w-6 h-6' />}
+								icon={<Syringe className='w-6 h-6' />}
 							/>
 
 							<span className='text-sm text-gray-400 font-medium mt-1 uppercase'>
@@ -135,6 +135,32 @@ export function SidebarDashboard({ children }: { children: React.ReactNode }) {
 								isCollapsed={isCollapsed}
 								icon={<Banknote className='w-6 h-6' />}
 							/>
+
+
+							<span className='text-sm text-gray-400 font-medium mt-1 uppercase'>
+								Cadastro de Pacientes
+							</span>
+
+							<SidebarLink
+								href="/dashboard/pacientes"
+								label="Meus Pacientes"
+								pathname={pathname}
+								isCollapsed={isCollapsed}
+								icon={<User className='w-6 h-6' />}
+							/>
+
+							<span className='text-sm text-gray-400 font-medium mt-1 uppercase'>
+								Cadastro de Médicos
+							</span>
+
+							<SidebarLink
+								href="/dashboard/medicos"
+								label="Meus Médicos"
+								pathname={pathname}
+								isCollapsed={isCollapsed}
+								icon={<Stethoscope className='w-6 h-6' />}
+							/>
+
 						</nav>
 					</CollapsibleContent>
 				</Collapsible>
@@ -152,11 +178,11 @@ export function SidebarDashboard({ children }: { children: React.ReactNode }) {
 						<div className='flex items-center gap-4'>
 							<SheetTrigger asChild>
 								<Button
-										variant="outline"
-										size="icon"
-										className='md:hidden'
-										onClick={()=> setIsCollapsed(false)}
-									>
+									variant="outline"
+									size="icon"
+									className='md:hidden'
+									onClick={() => setIsCollapsed(false)}
+								>
 									<List className='w-5 h-5' />
 								</Button>
 							</SheetTrigger>
